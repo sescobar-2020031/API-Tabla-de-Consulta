@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/index.css') }}">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <title>POKEDEX</title>
+</head>
+
+<body>
+    <section class="box">
+        <header>
+            <a href="#" class="logo">LevelUp</a>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="title">
+            <h2>Pokédex</h2>
+        </div>
+        <div class="custom-shape-divider-bottom-1650703714">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                    class="shape-fill">
+                </path>
+            </svg>
+        </div>
+        <img src="../static/images/pokemonLogo.png">
+    </section>
+
+    {%for i in range(0, len)%}
+    <br>
+    <div class="content">
+        <div id="pokedex">
+            <div id="left">
+                <div id="logo"></div>
+                <div id="bg_curve1_left"></div>
+                <div id="bg_curve2_left"></div>
+                <div id="curve1_left">
+                    <div id="buttonGlass">
+                        <div id="reflect"> </div>
+                    </div>
+                    <div id="miniButtonGlass1"></div>
+                    <div id="miniButtonGlass2"></div>
+                    <div id="miniButtonGlass3"></div>
+                </div>
+                <div id="curve2_left">
+                    <div id="junction">
+                        <div id="junction1"></div>
+                        <div id="junction2"></div>
+                    </div>
+                </div>
+                <div id="screen">
+                    <div id="topPicture">
+                        <div id="buttontopPicture1"></div>
+                        <div id="buttontopPicture2"></div>
+                    </div>
+                    <div id="picture">
+                        <img src={{imagen[i]}} alt="Foto Pokemon" height="170">
+                    </div>
+                    <div id="buttonbottomPicture"></div>
+                    <div id="speakers">
+                        <div class="sp"></div>
+                        <div class="sp"></div>
+                        <div class="sp"></div>
+                        <div class="sp"></div>
+                    </div>
+                </div>
+                <div id="bigbluebutton"></div>
+                <div id="barbutton1"></div>
+                <div id="barbutton2"></div>
+                <div id="cross">
+                    <div id="leftcross">
+                        <div id="leftT"></div>
+                    </div>
+                    <div id="topcross">
+                        <div id="upT"></div>
+                    </div>
+                    <div id="rightcross">
+                        <div id="rightT"></div>
+                    </div>
+                    <div id="midcross">
+                        <div id="midCircle"></div>
+                    </div>
+                    <div id="botcross">
+                        <div id="downT"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="right">
+                <div id="stats">
+                    <strong>Name:</strong> {{pokemon[i]}}<br />
+                    <strong>Type:</strong> {{tipo[i]}}<br />
+                    <strong>Height:</strong> {{peso[i]}}<br />
+                    <strong>Weight:</strong> {{altura[i]}}<br /><br />
+                </div>
+                <div id="blueButtons1">
+                    <div class="blueButton"></div>
+                    <div class="blueButton"></div>
+                    <div class="blueButton"></div>
+                    <div class="blueButton"></div>
+                    <div class="blueButton"></div>
+                </div>
+                <div id="blueButtons2">
+                    <div class="blueButton"></div>
+                    <div class="blueButton"></div>
+                    <div class="blueButton"></div>
+                    <div class="blueButton"></div>
+                    <div class="blueButton"></div>
+                </div>
+                <div id="miniButtonGlass4"></div>
+                <div id="miniButtonGlass5"></div>
+                <div id="barbutton3"></div>
+                <div id="barbutton4"></div>
+                <div id="yellowBox1"></div>
+                <div id="yellowBox2"></div>
+                <div id="bg_curve1_right"></div>
+                <div id="bg_curve2_right"></div>
+                <div id="curve1_right"></div>
+                <div id="curve2_right"></div>
+            </div>
+        </div>
+    </div>
+    {%endfor%}
+</body>
+
+</html>
